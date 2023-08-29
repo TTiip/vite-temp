@@ -3,6 +3,7 @@ import './style.css'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from '~/App.vue'
 import routes from '~/router'
+import 'uno.css'
 
 // 预加载icon 并且使用icon的时候需要以下步骤之一
 // 1.将标签设置为块级标
