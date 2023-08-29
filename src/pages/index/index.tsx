@@ -5,7 +5,7 @@ export default defineComponent({
   setup () {
     return () => (
       <div>
-				Index
+				index111111
       </div>
     )
   },
