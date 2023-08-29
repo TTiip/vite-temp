@@ -60,12 +60,12 @@ module.exports = {
     '@typescript-eslint/comma-dangle': [
       'error',
       {
-        arrays: 'never',
-        objects: 'always',
-        imports: 'never',
-        exports: 'never',
-        functions: 'never',
-      }
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+      },
     ],
     // 关闭缩进检测
     '@typescript-eslint/indent': 'off',
@@ -88,25 +88,25 @@ module.exports = {
       {
         before: false,
         after: true,
-      }
+      },
     ],
     // 末尾逗号使用规则配置
     'comma-dangle': [
       'error',
       {
-        arrays: 'never',
-        objects: 'always',
-        imports: 'never',
-        exports: 'never',
-        functions: 'never',
-      }
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+      },
     ],
     // vue 文件 按照特定的顺序 排列 template script style
     'vue/component-tags-order': [
       'error',
       {
         order: ['template', 'script', 'style'],
-      }
+      },
     ],
   },
   overrides: [
@@ -116,6 +116,6 @@ module.exports = {
       rules: {
         indent: 'off',
       },
-    }
+    },
   ],
 }
