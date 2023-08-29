@@ -10,7 +10,7 @@ module.exports = {
     // 强制使用 两个字符 缩进
     'indent': ['error', 2, {
       // switch case 开头的缩进 1 * 2
-      SwitchCase: 1
+      SwitchCase: 1,
     }],
     // 函数参数 不使用换行
     'function-paren-newline': ['error', 'never'],
@@ -57,12 +57,21 @@ module.exports = {
     // 禁止使用特定的语法
     'no-restricted-syntax': 'off',
     // typescript 关闭逗号检测
-    '@typescript-eslint/comma-dangle': ['error', 'never'],
+    '@typescript-eslint/comma-dangle': [
+      'error',
+      {
+        arrays: 'never',
+        objects: 'always',
+        imports: 'never',
+        exports: 'never',
+        functions: 'never',
+      }
+    ],
     // 关闭缩进检测
     '@typescript-eslint/indent': 'off',
     // {} 括号和 else 换行风格。
     '@typescript-eslint/brace-style': ['error', '1tbs', {
-      allowSingleLine: true
+      allowSingleLine: true,
     }],
     // script标签缩进设置
     'vue/script-indent': ['error', 2, {
@@ -71,14 +80,14 @@ module.exports = {
       // switch 缩进 1 * 2
       switchCase: 1,
       // 忽略的节点
-      ignores: []
+      ignores: [],
     }],
     // 逗号前面不要空格，后面必须空格
     'comma-spacing': [
       'error',
       {
         before: false,
-        after: true
+        after: true,
       }
     ],
     // 末尾逗号使用规则配置
@@ -86,27 +95,27 @@ module.exports = {
       'error',
       {
         arrays: 'never',
-        objects: 'never',
+        objects: 'always',
         imports: 'never',
         exports: 'never',
-        functions: 'never'
+        functions: 'never',
       }
     ],
     // vue 文件 按照特定的顺序 排列 template script style
     'vue/component-tags-order': [
       'error',
       {
-        order: ['template', 'script', 'style']
+        order: ['template', 'script', 'style'],
       }
-    ]
+    ],
   },
   overrides: [
     {
       files: ['*.vue'],
       // 关闭 vue 文件中的缩进检测
       rules: {
-        indent: 'off'
-      }
+        indent: 'off',
+      },
     }
-  ]
+  ],
 }
