@@ -1,11 +1,13 @@
+// 预加载icon 并且使用icon的时候需要以下步骤之一!!!
+// 1.将标签设置为块级标
+// 2.父级标签设置flex
+// 3.自身标签设置flex
+
 import {
   defineConfig,
-  presetAttributify,
   presetIcons,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
@@ -32,24 +34,15 @@ export default defineConfig({
   ],
   presets: [
     presetUno(),
-    presetAttributify(),
     presetIcons({
       scale: 1.2,
       warn: true,
-    }),
-    presetWebFonts({
-      fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
-      },
     }),
   ],
   // css 中使用原子化 类名
   // @apply 这种写法
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup(),
   ],
   // 预加载 class 对应的样式 (配置安全列表)
   safelist: [
