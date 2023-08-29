@@ -13,7 +13,7 @@
 <script setup lang="ts">
   import HelloWorld from './components/HelloWorld.vue'
 
-  const a = 123
+  let a = 123
   console.log(a)
 </script>
 
