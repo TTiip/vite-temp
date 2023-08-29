@@ -8,10 +8,12 @@
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <TestRender />
 </template>
 
 <script setup lang="ts">
   import HelloWorld from './components/HelloWorld.vue'
+  import TestRender from './components/TestRender'
 
   let a = 123
   console.log(a)
