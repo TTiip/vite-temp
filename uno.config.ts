@@ -47,20 +47,6 @@ export default defineConfig({
   // 预加载 class 对应的样式 (配置安全列表)
   safelist: [
     ...[
-      // 'iconoir:home',
-      // 'iconoir:settings',
-      // 'iconoir:google-docs',
-      // 'iconoir:bookmark-book',
-      // 'iconoir:network-right',
-      // 'iconoir:open-new-window',
-      // 'iconoir:align-right',
-      // 'iconoir:transition-left',
-      // 'iconoir:transition-right',
-      // 'iconoir:collapse',
-      // 'iconoir:expand',
-      // 'iconoir-cancel'
-    ].map(i => `i-${i}`).join(' ').split(' '),
-    ...[
       'blue-500',
       'teal-500',
       'indigo-500',

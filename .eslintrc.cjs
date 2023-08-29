@@ -1,6 +1,8 @@
 module.exports = {
   extends: ['@antfu'],
   rules: {
+    // 强制数组方法的回调函数中有 return 语句
+    'array-callback-return': 'off',
     // tsx jsx中标签使用className替代class
     'react/no-unknown-property': 'off',
     // JSX、TSX 函数组件必须需要函数名 (可以在JSX、TSX中使用 'name' 属性定义组件名)
