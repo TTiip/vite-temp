@@ -1,9 +1,32 @@
 const routes = [
-  { path: '/', component: () => import('~/pages/index') },
-  { path: '/test1', component: () => import('~/pages/test1') },
-  { path: '/test2', component: () => import('~/pages/test2') },
-  { path: '/:catchAll(.*)', redirect: '/404' },
-  { path: '/404', name: '404', component: () => import('~/pages/[...all]') },
+  {
+    path: '/Index',
+    name: 'Index',
+    meta: {},
+    component: () => import('~/pages/index'),
+  },
+  {
+    path: '/index1',
+    name: 'Index1',
+    meta: {},
+    component: () => import('~/pages/index1/index'),
+  },
+  {
+    path: '/:catchAll(.*)',
+    meta: {},
+    redirect: '/404',
+  },
+  {
+    path: '/',
+    meta: {},
+    redirect: '/index',
+  },
+  {
+    path: '/404',
+    name: '404',
+    meta: {},
+    component: () => import('~/pages/[...all]'),
+  },
 ]
 
 export default routes
