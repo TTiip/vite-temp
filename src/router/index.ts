@@ -16,7 +16,7 @@ const routes = [
     meta: {
       layout: Test,
     },
-    component: () => import('~/pages/index1/index'),
+    component: () => import('~/pages/index1'),
   },
   {
     path: '/:catchAll(.*)',
