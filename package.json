@@ -8,7 +8,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "npx vitest"
   },
   "dependencies": {
     "vue": "^3.3.4",
@@ -21,8 +22,10 @@
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "eslint": "^8.23.1",
+    "pinia": "^2.1.6",
     "typescript": "^4.8.3",
     "unocss": "^0.55.3",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vitest": "^0.34.3"
   }
 }
