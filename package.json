@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "npx vitest"
+    "test:w": "vitest",
+    "test:r": "vitest run"
   },
   "dependencies": {
     "vue": "^3.3.4",
