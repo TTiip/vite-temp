@@ -8,6 +8,11 @@ function tellAge () {
   return '就不告诉你'
 }
 
+function tellByFunciotn () {
+  return config.getAge() === 18 ? 'yes' : 'no'
+}
+
 export {
   tellAge,
+  tellByFunciotn,
 }
