@@ -5,7 +5,7 @@ vi.mock('./config.ts', async importOriginal => {
   // 方法一 (推荐)
   // importOriginal方法 获取原来的配置参数
   // 通过 Object.assign 做属性合并
-  // 避免修改了之前的配置项
+  // 避免修改了原来的配置！！！
   const config = await importOriginal()
 
   // // 方法二
