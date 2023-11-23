@@ -1,6 +1,8 @@
 module.exports = {
   extends: ['@antfu'],
   rules: {
+    // 用export暴露模块内容时，不应暴露可更改的数据
+    'import/no-mutable-exports': 'off',
     // 强制数组方法的回调函数中有 return 语句
     'array-callback-return': 'off',
     // tsx jsx中标签使用className替代class

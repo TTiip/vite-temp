@@ -5,14 +5,15 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, watchEffect } from 'vue'
+  import { shallowRef, watchEffect } from 'vue'
   import { useRoute } from 'vue-router'
+  import Default from '~/components/layouts/default'
 
   const route = useRoute()
-  const componentName = ref()
+  const componentName = shallowRef()
 
   watchEffect(() => {
-    componentName.value = route.meta.layout
+    componentName.value = route.meta.layout || Default
   })
 </script>
 

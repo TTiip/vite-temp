@@ -1,11 +1,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Index',
+  name: 'NoLayout',
   setup () {
     return () => (
       <div>
-        <div>Layout</div>
         <router-view />
       </div>
     )
