@@ -1,26 +1,29 @@
 import { afterAll, afterEach, beforeAll, beforeEach, describe, test } from 'vitest'
 
 // 1.执行顺序
-// beforeAll(仅会执行一次) --> beforeEach(每个case执行前都会调用) --> test测试case --> afterEach(每个case执行后都会调用) --> afterAll(仅会执行一次)
+// (1)所有的执行case执行之前执行beforeAll（仅执行一次）！！！
+// (2)每一个测试case 执行之前执行每一个 beforeEach
+// (3)每一个测试case
+// (4)每一个测试case 执行之后执行每一个 afterEach
+// (5)所有的执行case执行之后执行afterAll（仅执行一次）！！！
 
-// 只执行一次 最开始的时候
 // 数据库的连接
 // 创建临时文件
 beforeAll(() => {
   console.log('beforeAll')
-  return () => {
-    // return 的函数代表 afterAll
-    console.log('afterAll in beforeAll')
-  }
+  // return () => {
+  //   // return 的函数代表 afterAll
+  //   console.log('afterAll in beforeAll')
+  // }
 })
 
 // pinia 创建store
 beforeEach(() => {
   console.log('beforeEach')
-  return () => {
-    // return 的函数代表 afterEach
-    console.log('afterEach in beforeEach')
-  }
+  // return () => {
+  //   // return 的函数代表 afterEach
+  //   console.log('afterEach in beforeEach')
+  // }
 })
 
 test('first', () => {
@@ -60,4 +63,4 @@ describe('sub', () => {
     console.log('sub: afterEach')
   })
 })
-// 2.什么时候调用
+// 2.什么时候使用
