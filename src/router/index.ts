@@ -12,6 +12,8 @@ let routes: any[] = Object.entries(pages).map(([path, config]) => {
   const routePath = path.replace('../pages', '').replace('/page.ts', '') || '/index'
   const name = routePath.split('/').filter(Boolean).join('-')
   const compPath = path.replace('page.ts', 'index.tsx')
+  console.log(compPath, 'compPath')
+
   return {
     path: routePath,
     name,

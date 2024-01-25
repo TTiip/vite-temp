@@ -1,7 +1,7 @@
-import Test from '~/components/layouts/test'
+import Layout from '~/layouts'
 
 export default {
   title: 'index - index2',
   menuOrder: 3,
-  layout: Test,
+  layout: Layout,
 }

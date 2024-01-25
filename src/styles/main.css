@@ -1,0 +1,39 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* element-plus reset */
+.el-aside, .el-main {
+  padding: 0!important;
+}
+
+.el-form-item {
+  min-width: 300px;
+  margin-right: 20px!important;
+}
+
+.el-input,
+.el-select {
+  width: 100%!important;
+}
+
+/* .el-scrollbar__view {
+  display: flex;
+}
+
+.el-scrollbar__wrap {
+  flex: 1;
+  height: auto;
+}
+
+.el-scrollbar__bar {
+  bottom: -6px;
+}
+
+.el-scrollbar__view {
+  padding-top: 6px;
+} */

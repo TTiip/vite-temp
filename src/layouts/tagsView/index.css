@@ -1,0 +1,69 @@
+.tab-item {
+  --color: white;
+  --color: transparent;
+
+  @apply duration-300 relative text-sm h-7 cursor-pointer rounded-t-lg inline-flex items-center pl-2 pr-2 bg-[var(--color)] z-1;
+}
+
+.tab-item::before {
+  @apply absolute bottom-0 content-none rounded-full w-5 h-5;
+
+  box-shadow: 0 0 0 4px var(--color);
+}
+
+.tab-item::before {
+  @apply -left-5 duration-300;
+
+  clip-path: inset(50% -10px 0 50%);
+}
+
+.tab-item::after {
+  @apply -right-5 duration-300;
+
+  clip-path: inset(50% 50% 0 -10px);
+}
+
+.tab-item:hover {
+  --color: #f3f4f6;
+  border-bottom-right-radius: 6px;
+}
+
+.dark .tab-item:hover {
+  --color: #52525b;
+  border-bottom-right-radius: 6px;
+}
+
+.tab-item:hover .icon-close,
+.dark .tab-item:hover .icon-close {
+  @apply opacity-100;
+}
+
+.tab-item:first-child .split {
+  @apply hidden;
+}
+
+.tab-item.active {
+  color: var(--el-color-primary);
+  --color: #fff;
+  @apply pl-6 duration-300;
+  border-bottom-right-radius: 6px;
+}
+
+.dark .tab-item.active {
+  --color: #18181b;
+  border-bottom-right-radius: 6px;
+  @apply duration-300;
+}
+
+.tab-item.active .split,
+.tab-item.active+.tab-item .split {
+  @apply hidden duration-300;
+}
+
+.v-dropdown {
+  @apply flex flex-col -mx-3 -my-2;
+}
+
+.v-dropdown li {
+	@apply hover:(bg-primary-1 text-primary) py-1.5 px-4 cursor-pointer;
+}
