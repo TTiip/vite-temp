@@ -1,4 +1,4 @@
-import { useTagsViewStore } from '~/stores'
+import { useTagsViewStore, useUserStore } from '~/stores'
 
 const getTagsViewInstance = () => {
   const tagsViewStore = useTagsViewStore()

@@ -1,6 +1,7 @@
 import { ElPopover } from 'element-plus'
 import { defineComponent, useAttrs, watch } from 'vue'
 import { useCssVar, useLocalStorage } from '@vueuse/core'
+import { toggleDark } from '~/composables'
 
 export default defineComponent({
   name: 'ChooseTheme',

@@ -6,14 +6,12 @@ const pages = import.meta.glob('../pages/**/page.ts', {
   import: 'default',
 })
 
-const pageComps = import.meta.glob('../pages/**/*.tsx')
-console.log(pageComps, 'pageComps')
+const pageComps = import.meta.glob('../pages/**/index.tsx')
 
 let routes: any[] = Object.entries(pages).map(([path, config]) => {
   const routePath = path.replace('../pages', '').replace('/page.ts', '') || '/index'
   const name = routePath.split('/').filter(Boolean).join('-')
   const compPath = path.replace('page.ts', 'index.tsx')
-  console.log(compPath, 'compPath')
 
   return {
     path: routePath,
@@ -42,5 +40,4 @@ routes = [
   },
 ]
 
-console.log(routes, 'routes')
 export default routes
