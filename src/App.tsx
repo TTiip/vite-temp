@@ -10,8 +10,13 @@ export default defineComponent({
     const route = useRoute()
     const Layout = shallowRef()
     watch(route, newVal => {
-      // 路由改变的时候去更改 layout
-      Layout.value = newVal?.meta?.layout || Layouts
+      // 当不需要隐藏layout时候 赋值layout
+      if (!newVal?.meta?.noUseLayout) {
+        // 路由改变的时候去更改 layout
+        Layout.value = newVal?.meta?.layout || Layouts
+      } else {
+        Layout.value = null
+      }
     })
     const config = {
       size: 'default',
@@ -27,9 +32,16 @@ export default defineComponent({
     return () => (
       <ElConfigProvider {...config}>
         <main class="font-sans text-gray-700 dark:text-gray-200">
-          <Layout.value>
-            <router-view />
-          </Layout.value>
+          {
+            Layout.value
+              ? (
+                <Layout.value>
+                  <router-view />
+                </Layout.value>
+              )
+              : <router-view />
+          }
+
         </main>
       </ElConfigProvider>
     )
