@@ -31,7 +31,7 @@ export interface FileReader {
 // 属性
 // export class ReadAndProcessFile {
 //   run (filePath: string) {
-//     //     const content = readFileSync(filePath, { encoding: "utf-8" });
+// // const content = readFileSync(filePath, { encoding: 'utf-8' })
 //     const content = this.fileReader.read(filePath)
 
 //     return `${content}->unit test`
