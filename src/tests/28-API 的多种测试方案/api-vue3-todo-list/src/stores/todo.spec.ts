@@ -45,7 +45,6 @@ test('add todo', async () => {
 })
 
 test('should not add todo when title is empty string', async () => {
-  setActivePinia(createPinia())
   const todoStore = useTodoStore()
   const title = ''
 
@@ -93,7 +92,6 @@ test('should throw error when removed id does not exist ', async () => {
     })
   })
 
-  setActivePinia(createPinia())
   const todoStore = useTodoStore()
 
   expect(async () => {
@@ -118,7 +116,6 @@ test.only('update todo list', async () => {
     })
   })
 
-  setActivePinia(createPinia())
   const todoStore = useTodoStore()
   await todoStore.updateTodoList()
 
