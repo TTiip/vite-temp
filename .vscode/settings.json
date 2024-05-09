@@ -6,10 +6,17 @@
     "source.organizeImports": "never"
   },
 
-  // The following is optional.
-  // It's better to put under project setting `.vscode/settings.json`
-  // to avoid conflicts with working with different eslint configs
-  // that does not support all formats.
+  /* 路径别名插件 开始 */
+  "alias-skip.mappings": {
+    "@": "/src", // 默认只有`@`映射，映射到`/src`，你可以添加更多映射，映射路径必须以`/`开头
+    "~": "/src"
+  },
+  // 可缺省后缀名的文件列表，以下文件不需要写后缀名
+  "alias-skip.allowedsuffix": ["js", "vue", "jsx", "ts", "tsx"],
+  // 判断项目根目录的依据，默认为package.json，即存在该文件的目录为项目根目录，例如小程序项目可以改成app.json
+  "alias-skip.rootpath": "package.json",
+  /* 路径别名插件 结束 === */
+
   "eslint.validate": [
     "javascript",
     "javascriptreact",
