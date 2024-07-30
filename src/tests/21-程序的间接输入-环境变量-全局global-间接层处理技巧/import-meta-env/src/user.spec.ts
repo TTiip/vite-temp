@@ -21,9 +21,3 @@ it('doubleUserAgeNew', () => {
 
   expect(r).toBe(4)
 })
-
-it('should ', () => {
-  const callback = vi.fn()
-  result.current.handleSubmit(callback)
-  expect()
-})
