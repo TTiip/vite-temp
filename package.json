@@ -17,6 +17,7 @@
     "echarts": "^5.4.3",
     "element-plus": "^2.2.17",
     "sortablejs": "^1.15.0",
+    "vitest-environment-cxr": "link:src/tests/37-Vitest 模拟浏览器环境&自定义环境/vitest-environment-cxr",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
@@ -28,9 +29,11 @@
     "@unocss/reset": "^0.44.7",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vitest/ui": "^0.34.3",
     "@vue/test-utils": "^2.0.2",
+    "axios": "^1.5.0",
     "eslint": "^8.23.1",
-    "jsdom": "^20.0.0",
+    "happy-dom": "^9.20.3",
     "pinia": "^2.1.6",
     "pnpm": "^7.11.0",
     "taze": "^0.7.6",
@@ -38,9 +41,7 @@
     "unocss": "^0.55.3",
     "vite": "^3.1.0",
     "vitest": "^0.34.3",
-    "vue-tsc": "^0.39.5",
-    "@vitest/ui": "^0.34.3",
-    "axios": "^1.5.0"
+    "vue-tsc": "^0.39.5"
   },
   "eslintConfig": {
     "extends": "@antfu"
