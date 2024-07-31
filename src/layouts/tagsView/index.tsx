@@ -130,7 +130,7 @@ export default defineComponent({
                       show.value = true
                     }, ['prevent']) }
                   >
-                    <div class={ `z-9 h-24px shrink-0 tab-item ${isActive.value(item) ? 'active' : ''}` }>
+                    <div class={ `bottom-[-3px] z-9 h-24px shrink-0 tab-item ${isActive.value(item) ? 'active' : ''}` }>
                       <span class="split absolute left-[-6px] z-[-1] text-gray-400">｜</span>
                       <div v-show={ isActive.value(item) } class="absolute left-3 h-2 w-2 rounded-full mr-1.5 bg-[var(--el-color-primary)]" />
                       <div class="px-6px">{ item?.meta?.title }</div>
