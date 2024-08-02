@@ -9,7 +9,8 @@
     "lint:fix": "eslint . --fix",
     "test:w": "vitest",
     "test:r": "vitest run",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "dep:up": "taze -Ir major"
   },
   "dependencies": {
     "@vueuse/core": "^8.9.4",
