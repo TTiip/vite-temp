@@ -1,5 +1,6 @@
 import type { AxiosInstance, AxiosInterceptorManager, AxiosPromise } from 'axios'
-import axios, { AxiosRequestConfig, AxiosResponse, Method } from 'axios'
+import axios from 'axios'
+import type{ AxiosRequestConfig, AxiosResponse, Method } from 'axios'
 import { ElMessage } from 'element-plus'
 import type { apiKeyDataType, apiKeyType } from '~/api'
 import apiList from '~/api'
