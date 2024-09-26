@@ -13,6 +13,5 @@ export default defineComponent({
         </ElSteps>
       </div>
     )
-  }
+  },
 })
-

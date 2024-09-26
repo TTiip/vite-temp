@@ -22,4 +22,3 @@ export {
   userAge,
   fetchUserAge,
 }
-

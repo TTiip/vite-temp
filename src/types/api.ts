@@ -13,6 +13,6 @@ interface UserInfoDataItem {
 // interface
 export type {
   Common,
-  UserInfoDataItem
+  UserInfoDataItem,
 
 }

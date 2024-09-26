@@ -35,20 +35,20 @@ export default defineComponent({
           {/* 修改主题组件 */}
           <ChooseTheme class="absolute right-5 top-5 text-base" />
           <ElForm
-            ref={ formRef }
+            ref={formRef}
             size="large"
             class="z-1 m-auto p-10 bg-white dark:bg-zinc-800 min-w-sm flex flex-col box-content rounded-lg shadow-lg"
-            model={ model }
-            onSubmit={ withModifiers(submit, ['prevent', 'stop']) }
+            model={model}
+            onSubmit={withModifiers(submit, ['prevent', 'stop'])}
           >
             <div class="flex items-center gap-3">
               <img src="../../public/logo.png" class="h-15 select-none" />
               <div>
                 <div class="tracking-widest whitespace-nowrap font-extrabold text-4xl text-gray-700 dark:text-gray-100">
-									后台管理系统
+                  后台管理系统
                 </div>
                 <p class="text-sm tex-gray-400">
-									Vitesse Background Management System
+                  Vitesse Background Management System
                 </p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default defineComponent({
 
             <ElFormItem rules={{ required: true, message: '用户名不能为空', trigger: ['change', 'blur'] }} prop="username">
               <ElInput
-                v-model={ model.username }
+                v-model={model.username}
                 placeholder="用户名: 默认 admin"
                 v-slots={{
                   prefix: () => <i class="i-iconoir-user" />,
@@ -65,7 +65,7 @@ export default defineComponent({
             </ElFormItem>
             <ElFormItem rules={{ required: true, message: '密码不能为空', trigger: ['change', 'blur'] }} prop="password">
               <ElInput
-                v-model={ model.password }
+                v-model={model.password}
                 type="password"
                 show-password
                 placeholder="密码: 默认 password"

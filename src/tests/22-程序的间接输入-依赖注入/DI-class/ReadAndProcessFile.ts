@@ -9,7 +9,7 @@
 // }
 
 export interface FileReader {
-  read(filePath: string): string
+  read: (filePath: string) => string
 }
 
 // 构造器

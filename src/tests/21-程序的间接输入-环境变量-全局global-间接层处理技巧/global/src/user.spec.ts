@@ -36,4 +36,3 @@ describe('doubleUserAge', () => {
     expect(r).toBe(400)
   })
 })
-

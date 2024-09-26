@@ -11,6 +11,6 @@ const iconList = [
   'i-iconoir:transition-right',
   'i-iconoir:collapse',
   'i-iconoir:expand',
-  'i-iconoir-cancel'
+  'i-iconoir-cancel',
 ]
 export default iconList

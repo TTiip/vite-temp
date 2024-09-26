@@ -1,5 +1,5 @@
 // user.test.js
-import { describe, expect, it, vi } from 'vitest'
+import { expect, it, vi } from 'vitest'
 import { sendWelcomeEmail } from './stub'
 import { getUserEmail } from './stub.database'
 

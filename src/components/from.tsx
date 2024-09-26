@@ -1,5 +1,5 @@
-import { ElButton, ElDatePicker, ElForm, ElFormItem, ElInput, ElOption, ElSelect } from 'element-plus'
 import type { FormInstance } from 'element-plus'
+import { ElButton, ElDatePicker, ElForm, ElFormItem, ElInput, ElOption, ElSelect } from 'element-plus'
 import { ItemTypeEnum, type typeFormItem } from '~/types/form'
 
 export default defineComponent({
@@ -7,27 +7,27 @@ export default defineComponent({
   props: {
     model: {
       type: Object,
-      required: true
+      required: true,
     },
     fromItemConfig: {
       type: Object,
-      required: true
+      required: true,
     },
     inline: {
       type: Boolean,
-      default: true
+      default: true,
     },
     rules: {
       type: Object,
-      default: () => {}
+      default: () => {},
     },
     labelWidth: {
       type: String,
-      default: '100px'
+      default: '100px',
     },
     optionText: {
-      type: String
-    }
+      type: String,
+    },
   },
   setup (props) {
     const {
@@ -36,7 +36,7 @@ export default defineComponent({
       inline,
       rules,
       labelWidth,
-      optionText
+      optionText,
     } = props
 
     const ruleFormRef = ref<FormInstance>()
@@ -109,14 +109,14 @@ export default defineComponent({
               optionText
                 ? (
                   <>
-                    <ElButton type="primary" onClick={ () => onSubmit(ruleFormRef.value) }>{optionText}</ElButton>
+                    <ElButton type="primary" onClick={() => onSubmit(ruleFormRef.value)}>{optionText}</ElButton>
                   </>
                 )
                 : (
                   <>
                     <div>
-                      <ElButton onClick={ () => resetForm(ruleFormRef.value) }>重置</ElButton>
-                      <ElButton type="primary" onClick={ () => onSubmit(ruleFormRef.value) }>查询</ElButton>
+                      <ElButton onClick={() => resetForm(ruleFormRef.value)}>重置</ElButton>
+                      <ElButton type="primary" onClick={() => onSubmit(ruleFormRef.value)}>查询</ElButton>
                     </div>
                   </>
                 )
@@ -126,5 +126,5 @@ export default defineComponent({
         </ElForm>
       </div>
     )
-  }
+  },
 })

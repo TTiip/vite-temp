@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest'
 import type { FileReader } from './ReadAndProcessFile'
+import { describe, expect, it } from 'vitest'
 import { ReadAndProcessFile } from './ReadAndProcessFile'
 
 describe('di - class', () => {

@@ -1,7 +1,7 @@
+import type { RouteLocationRaw } from 'vue-router'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import type { RouteLocationRaw } from 'vue-router'
 
 const useTagsViewStore = defineStore('tagsView', () => {
   const router = useRouter()

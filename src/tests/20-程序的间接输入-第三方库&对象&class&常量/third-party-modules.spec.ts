@@ -1,5 +1,5 @@
-import { expect, test, vi } from 'vitest'
 import axios from 'axios'
+import { expect, test, vi } from 'vitest'
 import { doubleUserAge } from './third-party-modules'
 
 vi.mock('axios')

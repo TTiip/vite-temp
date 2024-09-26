@@ -1,8 +1,8 @@
+import type { MaybeRef } from '@vueuse/shared'
 import type { Ref } from 'vue'
 import { computed, nextTick, unref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
 
-import type { MaybeRef } from '@vueuse/shared'
+import { useRoute, useRouter } from 'vue-router'
 
 export interface ReactiveRouteOptions {
   /**
@@ -25,13 +25,11 @@ export interface ReactiveRouteOptions {
 
 export function useRouteQuery (name: string): Ref<null | string | string[]>
 export function useRouteQuery<T extends null | undefined | string | number | string[] = null | string | number | string[]> (name: string, defaultValue?: T, options?: ReactiveRouteOptions): Ref<T>
-export function useRouteQuery<T extends string | string[]> (name: string,
-  defaultValue?: T,
-  {
-    mode = 'replace',
-    route = useRoute(),
-    router = useRouter(),
-  }: ReactiveRouteOptions = {}) {
+export function useRouteQuery<T extends string | string[]> (name: string, defaultValue?: T, {
+  mode = 'replace',
+  route = useRoute(),
+  router = useRouter(),
+}: ReactiveRouteOptions = {}) {
   const routeName = route.name
   const result = computed({
     get () {

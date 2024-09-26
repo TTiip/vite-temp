@@ -1,6 +1,9 @@
 {
+  // 禁用默认格式化程序，改用 eslint
   "prettier.enable": false,
   "editor.formatOnSave": false,
+
+  // 自动修复
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
@@ -17,6 +20,20 @@
   "alias-skip.rootpath": "package.json",
   /* 路径别名插件 结束 === */
 
+  // 在 IDE 中将样式规则静音，但仍自动修复它们
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off", "fixable": false },
+    { "rule": "format/*", "severity": "off", "fixable": false },
+    { "rule": "*-indent", "severity": "off", "fixable": false },
+    { "rule": "*-spacing", "severity": "off", "fixable": false },
+    { "rule": "*-spaces", "severity": "off", "fixable": false },
+    { "rule": "*-order", "severity": "off", "fixable": false },
+    { "rule": "*-dangle", "severity": "off", "fixable": false },
+    { "rule": "*-newline", "severity": "off", "fixable": false },
+    { "rule": "*quotes", "severity": "off", "fixable": false },
+    { "rule": "*semi", "severity": "off", "fixable": false }
+  ],
+  // 为所有支持的语言启用 eslint
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -27,6 +44,6 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
+    "yaml",
   ]
 }

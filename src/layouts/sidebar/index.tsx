@@ -1,5 +1,5 @@
-import { ElIcon, ElMenu, ElMenuItem, ElSubMenu } from 'element-plus'
 import type { PropType } from 'vue'
+import { ElIcon, ElMenu, ElMenuItem, ElSubMenu } from 'element-plus'
 import { defineComponent, useAttrs } from 'vue'
 import type { MenuItemType } from '~/types'
 import './index.css'
@@ -30,7 +30,7 @@ export default defineComponent({
             title: () => (
               <>
                 <ElIcon>
-                  <i class={`${item.icon}`}/>
+                  <i class={`${item.icon}`} />
                 </ElIcon>
                 <span>{item.name}</span>
               </>
@@ -40,9 +40,9 @@ export default defineComponent({
           if (item.children && item.children.length) {
             return (
               <ElSubMenu
-                key={ item.path }
-                index={ item.path }
-                v-slots={ slots }
+                key={item.path}
+                index={item.path}
+                v-slots={slots}
               >
                 { renderSlots(item.children) }
               </ElSubMenu>
@@ -50,12 +50,12 @@ export default defineComponent({
           } else {
             return (
               <ElMenuItem
-                key={ item.path }
-                index={ item.path }
+                key={item.path}
+                index={item.path}
               >
                 <>
                   <ElIcon>
-                    <i class={`${item.icon} text-18px`}/>
+                    <i class={`${item.icon} text-18px`} />
                   </ElIcon>
                   <span>{item.name}</span>
                 </>
@@ -66,9 +66,9 @@ export default defineComponent({
 
       return (
         <ElMenu
-          { ...menuAttrs }
-          default-active={ props.defaultActive! }
-          router={ props.router }
+          {...menuAttrs}
+          default-active={props.defaultActive!}
+          router={props.router}
           class="b-r-none! overflow-auto text-gray-700 dark:text-gray-200"
         >
           { renderSlots(props.menuData!) }

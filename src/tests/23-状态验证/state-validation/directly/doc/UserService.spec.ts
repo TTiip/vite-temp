@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { UserService } from './UserService'
 import { Database } from './database'
+import { UserService } from './UserService'
 
-describe('UserService', () => {
+describe('userService', () => {
   it('should create user ', () => {
     const database = new Database()
     const userService = new UserService(database)

@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { generateRandomString } from './random'
 
-describe('Math.random', () => {
+describe('math.random', () => {
   it('should generate random string', () => {
     // vi.spyOn(Math, 'random').mockImplementation(() => {
     //   return 0.1

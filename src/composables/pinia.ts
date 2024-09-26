@@ -1,6 +1,6 @@
 import { useTagsViewStore, useUserStore } from '~/stores'
 
-const getTagsViewInstance = () => {
+function getTagsViewInstance () {
   const tagsViewStore = useTagsViewStore()
 
   // 每当它发生变化时，将整个状态持久化到本地存储
@@ -16,13 +16,13 @@ const getTagsViewInstance = () => {
   return tagsViewStore
 }
 
-const getUserInstance = () => {
+function getUserInstance () {
   const userStore = useUserStore()
 
   return userStore
 }
 
 export {
-  getTagsViewInstance,
   getUserInstance,
+  getTagsViewInstance,
 }

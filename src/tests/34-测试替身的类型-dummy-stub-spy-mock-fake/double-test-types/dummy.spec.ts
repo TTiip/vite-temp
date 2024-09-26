@@ -1,8 +1,8 @@
-import { beforeEach, describe, expect, it, test } from 'vitest'
 import type { Recipient } from './dummy'
+import { describe, it, test } from 'vitest'
 import { sendEmail } from './dummy'
 
-describe('EmailService', () => {
+describe('emailService', () => {
   it('should send email', () => {
     const message = {
       subject: 'Test Subject',

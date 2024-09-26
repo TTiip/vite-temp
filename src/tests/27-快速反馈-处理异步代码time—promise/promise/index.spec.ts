@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { delay, fetchUserData } from './index'
 
-describe('Promise', () => {
+describe('promise', () => {
   it('normal', async () => {
     const result = await fetchUserData()
 

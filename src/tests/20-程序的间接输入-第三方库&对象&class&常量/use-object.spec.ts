@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { tellAge, tellByFunction } from './use-object'
 import { config } from './config'
+import { tellAge, tellByFunction } from './use-object'
 
 describe('使用对象的形式', () => {
   it('属性', () => {

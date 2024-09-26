@@ -1,11 +1,11 @@
 import type {
   Common,
-  UserInfoDataItem
+  UserInfoDataItem,
 } from '~/types'
 
 const apiList = {
   // 获取登录用户信息
-  getUserInfo: '/user-info'
+  getUserInfo: '/user-info',
 }
 
 export interface apiKeyDataType {

@@ -44,8 +44,7 @@ function run (func: (...args: any) => void) {
       .then(resp => {
         result.status = 'fulfilled'
         result.data = resp
-      },
-      err => {
+      }, err => {
         result.status = 'rejected'
         result.data = err
       })

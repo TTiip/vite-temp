@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
-import { UserService } from './UserService'
 import { Database } from './database'
+import { UserService } from './UserService'
 
-describe('UserService', () => {
+describe('userService', () => {
   it('should create user ', () => {
     // setup
     // Database.prototype.addUser = vi.fn()

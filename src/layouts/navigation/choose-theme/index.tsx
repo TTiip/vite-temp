@@ -1,6 +1,6 @@
+import { useCssVar, useLocalStorage } from '@vueuse/core'
 import { ElPopover } from 'element-plus'
 import { defineComponent, useAttrs, watch } from 'vue'
-import { useCssVar, useLocalStorage } from '@vueuse/core'
 import { toggleDark } from '~/composables'
 
 export default defineComponent({
@@ -8,9 +8,9 @@ export default defineComponent({
   setup () {
     const attrs = useAttrs()
     const hex2rgb = (hex: string) => {
-      const r = parseInt(hex.slice(1, 3), 16)
-      const g = parseInt(hex.slice(3, 5), 16)
-      const b = parseInt(hex.slice(5, 7), 16)
+      const r = Number.parseInt(hex.slice(1, 3), 16)
+      const g = Number.parseInt(hex.slice(3, 5), 16)
+      const b = Number.parseInt(hex.slice(5, 7), 16)
       return `${r}, ${g}, ${b}`
     }
 
@@ -38,7 +38,8 @@ export default defineComponent({
             reference: () => (
               <i
                 class="flex text-18px dark:i-iconoir-half-moon i-iconoir:sun-light"
-                onClick={ () => toggleDark() } />
+                onClick={() => toggleDark()}
+              />
             ),
           }}
         >
@@ -46,10 +47,10 @@ export default defineComponent({
             {
               colorList.map(color => (
                 <div
-                  key={ color }
-                  style={ `background: ${color};outline-color: ${color}` }
-                  class={ `h-5 w-5 rounded cursor-pointer ${elColorPrimary.value === color ? 'outline outline-offset-1' : ''}` }
-                  onClick={ () => elColorPrimary.value = color }
+                  key={color}
+                  style={`background: ${color};outline-color: ${color}`}
+                  class={`h-5 w-5 rounded cursor-pointer ${elColorPrimary.value === color ? 'outline outline-offset-1' : ''}`}
+                  onClick={() => elColorPrimary.value = color}
                 />
               ))
             }

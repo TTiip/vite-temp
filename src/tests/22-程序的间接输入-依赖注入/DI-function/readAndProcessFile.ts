@@ -1,6 +1,6 @@
 // 接口
 export interface FileReader {
-  read(filePath: string): string
+  read: (filePath: string) => string
 }
 
 export function readAndProcessFile (filePath: string, fileReader: FileReader): string {

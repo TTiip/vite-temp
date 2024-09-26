@@ -1,7 +1,7 @@
 import type { PropType } from 'vue'
-import { computed, defineComponent, shallowRef, useAttrs, withModifiers } from 'vue'
 import type { RouteLocation } from 'vue-router'
 import { ElScrollbar } from 'element-plus'
+import { computed, defineComponent, shallowRef, useAttrs, withModifiers } from 'vue'
 
 export default defineComponent({
   name: 'ScrollPane',
@@ -64,10 +64,10 @@ export default defineComponent({
 
     return () => (
       <ElScrollbar
-        { ...attrs }
-        ref={ scrollContainer }
+        {...attrs}
+        ref={scrollContainer}
         class="whitespace-nowrap flex-1 flex items-end"
-        onWheel={ withModifiers(handleScroll, ['passive']) }
+        onWheel={withModifiers(handleScroll, ['passive'])}
       >
         { ctx.slots?.default ? ctx.slots?.default() : null }
       </ElScrollbar>

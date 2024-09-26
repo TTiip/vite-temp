@@ -1,6 +1,6 @@
-import { describe, expect, test, vi } from 'vitest'
-import { OrderProcessor } from './orderProcessor'
+import { expect, test, vi } from 'vitest'
 import { sendEmail } from './EmailService'
+import { OrderProcessor } from './orderProcessor'
 
 vi.mock('./EmailService', () => {
   return {

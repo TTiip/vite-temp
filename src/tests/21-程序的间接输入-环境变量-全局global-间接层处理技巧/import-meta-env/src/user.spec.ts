@@ -1,6 +1,6 @@
 import { expect, it, vi } from 'vitest'
-import { doubleUserAge, doubleUserAgeNew } from './user'
 import { userAge } from './env'
+import { doubleUserAge, doubleUserAgeNew } from './user'
 
 vi.mock('./env')
 

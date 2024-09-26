@@ -1,5 +1,5 @@
-import { expect, test, vi } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
+import { expect, test, vi } from 'vitest'
 import { fetchAddTodo, fetchRemoveTodo, fetchTodoList } from '../api'
 import { useTodoStore } from './todo'
 

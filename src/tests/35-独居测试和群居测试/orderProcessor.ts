@@ -1,5 +1,5 @@
-import { checkStock } from './InventoryService'
 import { sendEmail } from './EmailService'
+import { checkStock } from './InventoryService'
 // 订单处理系统
 export class OrderProcessor {
   processOrder (order) {

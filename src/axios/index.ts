@@ -1,6 +1,6 @@
-import type { AxiosInstance, AxiosInterceptorManager, AxiosPromise } from 'axios'
+import type { AxiosInstance, AxiosInterceptorManager, AxiosPromise, AxiosRequestConfig, AxiosResponse, Method } from 'axios'
+
 import axios from 'axios'
-import type{ AxiosRequestConfig, AxiosResponse, Method } from 'axios'
 import { ElMessage } from 'element-plus'
 import type { apiKeyDataType, apiKeyType } from '~/api'
 import apiList from '~/api'
@@ -44,11 +44,11 @@ const NOT_QS_METHOD: Method[] = ['GET', 'get', 'DELETE', 'delete']
 const instance: NewAxiosInstance = axios.create({
   baseURL: '/api',
   timeout: 10000,
-  responseType: 'json'
+  responseType: 'json',
 })
 
 // 移除重复请求
-const removePending = (config: AxiosRequestConfig) => {
+function removePending (config: AxiosRequestConfig) {
   for (const key in pending) {
     const item: number = +key
     const list: PendingType = pending[key]
@@ -88,8 +88,7 @@ instance.interceptors.request.use(request => {
     pending.push({ url: request.url, method: request.method as Method, params: request.params, data: request.data, cancel: c })
   })
   return request
-},
-error => {
+}, error => {
   return Promise.reject(error)
 })
 
@@ -103,13 +102,12 @@ instance.interceptors.response.use(response => {
       type: 'error',
       message: response.data.message || '出了一点小差错，稍后再试吧～',
       showClose: true,
-      grouping: true
+      grouping: true,
     })
   }
 
   return response.data
-},
-error => {
+}, error => {
   const response = error.response
 
   switch (response.data.code) {
@@ -153,16 +151,16 @@ error => {
 })
 
 export {
-  AxiosRequestConfig,
   Method,
-  AxiosResponse
+  AxiosResponse,
+  AxiosRequestConfig,
 }
 
 /*
   限制泛型T必须是接口列表（apiKeyType）中的key
   限制obj中的url必须是接口列表中key的某一个
 */
-const httpFunc = <T extends apiKeyType>(options: AxiosRequestConfig & { url: T; method: Method }) => {
+function httpFunc<T extends apiKeyType> (options: AxiosRequestConfig & { url: T, method: Method }) {
   /*
     限制最终的返回数据类型, 通过 Promise 传入范型 限制 resolve 返回值的类型
   */
@@ -174,7 +172,7 @@ const httpFunc = <T extends apiKeyType>(options: AxiosRequestConfig & { url: T; 
       method: options.method || 'GET',
       responseType: options.responseType || 'json',
       // 这里使用 apifox 的云端mock功能，自己在 mock 中设置，没有服务器是这样的啦。
-      headers: Object.assign({ apifoxToken: 'l2Roc7eCoWvJ6SfNKQrOqeblTaIyqsg7' }, options.headers)
+      headers: Object.assign({ apifoxToken: 'l2Roc7eCoWvJ6SfNKQrOqeblTaIyqsg7' }, options.headers),
     }).then((res: any) => {
       resolve(res)
     }).catch(error => {

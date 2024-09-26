@@ -1,7 +1,21 @@
-import * as echarts from 'echarts/core'
+import type {
+  // 系列类型的定义后缀都为 SeriesOption
+  BarSeriesOption,
+  LineSeriesOption,
+} from 'echarts/charts'
+import type {
+  // 组件类型的定义后缀都为 ComponentOption
+  DatasetComponentOption,
+  GridComponentOption,
+  TitleComponentOption,
+  TooltipComponentOption,
+} from 'echarts/components'
+import type {
+  ComposeOption,
+} from 'echarts/core'
 import {
   BarChart,
-  LineChart
+  LineChart,
 } from 'echarts/charts'
 import {
   DatasetComponent,
@@ -11,25 +25,11 @@ import {
   TooltipComponent,
   // 数据集组件
   // 内置数据转换器组件 (filter, sort)
-  TransformComponent
+  TransformComponent,
 } from 'echarts/components'
+import * as echarts from 'echarts/core'
 import { LabelLayout, UniversalTransition } from 'echarts/features'
 import { CanvasRenderer } from 'echarts/renderers'
-import type {
-  // 系列类型的定义后缀都为 SeriesOption
-  BarSeriesOption,
-  LineSeriesOption
-} from 'echarts/charts'
-import type {
-  // 组件类型的定义后缀都为 ComponentOption
-  DatasetComponentOption,
-  GridComponentOption,
-  TitleComponentOption,
-  TooltipComponentOption
-} from 'echarts/components'
-import type {
-  ComposeOption
-} from 'echarts/core'
 
 // 通过 ComposeOption 来组合出一个只有必须组件和图表的 Option 类型
 type ECOption = ComposeOption<
@@ -53,7 +53,7 @@ echarts.use([
   LineChart,
   LabelLayout,
   UniversalTransition,
-  CanvasRenderer
+  CanvasRenderer,
 ])
 
 export default defineComponent({
@@ -63,23 +63,23 @@ export default defineComponent({
       title: {
         text: '订单统计',
         textStyle: {
-          color: '#909399'
-        }
+          color: '#909399',
+        },
       },
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
       },
       legend: {
         data: ['本月订单数', '本周订单数', '本月销售总额', '本周销售总额'],
         textStyle: {
-          color: '#909399'
-        }
+          color: '#909399',
+        },
       },
       grid: {
         left: '3%',
         right: '4%',
         bottom: '3%',
-        containLabel: true
+        containLabel: true,
       },
       xAxis: {
         type: 'category',
@@ -87,50 +87,50 @@ export default defineComponent({
         data: ['周一', '周二', '周三', '周四', '周五', '周六', '周天'],
         axisLine: {
           lineStyle: {
-            color: '#909399'
-          }
-        }
+            color: '#909399',
+          },
+        },
       },
       yAxis: {
         type: 'value',
         axisLine: {
           lineStyle: {
-            color: '#909399'
-          }
+            color: '#909399',
+          },
         },
         splitLine: {
           show: true,
           lineStyle: {
-            color: '#909399'
-          }
-        }
+            color: '#909399',
+          },
+        },
       },
       series: [
         {
           name: '本月订单数',
           type: 'line',
           smooth: true,
-          data: [120, 132, 101, 134, 90, 230, 210]
+          data: [120, 132, 101, 134, 90, 230, 210],
         },
         {
           name: '本周订单数',
           type: 'line',
           smooth: true,
-          data: [220, 182, 191, 234, 290, 330, 310]
+          data: [220, 182, 191, 234, 290, 330, 310],
         },
         {
           name: '本月销售总额',
           type: 'line',
           smooth: true,
-          data: [150, 232, 201, 154, 190, 330, 410]
+          data: [150, 232, 201, 154, 190, 330, 410],
         },
         {
           name: '本周销售总额',
           type: 'line',
           smooth: true,
-          data: [320, 332, 301, 334, 390, 330, 320]
-        }
-      ]
+          data: [320, 332, 301, 334, 390, 330, 320],
+        },
+      ],
     }
     onMounted(() => {
       const myChart = echarts.init(document.getElementById('main'))
@@ -139,5 +139,5 @@ export default defineComponent({
     return () => (
       <div id="main" class="w-100% h-100%"></div>
     )
-  }
+  },
 })

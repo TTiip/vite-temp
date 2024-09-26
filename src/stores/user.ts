@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
 import type { RouteRecordRaw } from 'vue-router'
-import type { UserInfoDataItem } from '~/types'
+import { defineStore } from 'pinia'
 import axios from '~/axios'
+import type { UserInfoDataItem } from '~/types'
 
 function hasPermission (route: RouteRecordRaw, permissions: any[] = []) {
   if (!route.meta?.permission) {
@@ -22,7 +22,7 @@ function filterAsyncRoutes (routes: RouteRecordRaw[], permissions: any) {
     if (hasPermission(route, permissions)) {
       result.push({
         ...route,
-        children: route.children ? filterAsyncRoutes(route.children, permissions) : []
+        children: route.children ? filterAsyncRoutes(route.children, permissions) : [],
       })
     }
     return result
@@ -43,8 +43,8 @@ export const useUserStore = defineStore('user', () => {
         method: 'POST',
         data: {
           name: 'test - name',
-          password: 'test - password'
-        }
+          password: 'test - password',
+        },
       })
       console.log(res, 'res')
 
@@ -56,6 +56,6 @@ export const useUserStore = defineStore('user', () => {
   return {
     userInfo,
     setUserInfo,
-    getUserInfo
+    getUserInfo,
   }
 })

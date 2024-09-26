@@ -1,8 +1,8 @@
-import path from 'path'
-import { defineConfig } from 'vitest/config'
+import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vitest/config'
 
 // https://vitejs.dev/config/
 export default defineConfig({

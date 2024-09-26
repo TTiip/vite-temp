@@ -29,7 +29,7 @@ export default defineComponent({
           {
             tabsList.map(item => (
               <div class="flex items-center" key={item.name}>
-                <i class={`${item.icon} text-54px`}/>
+                <i class={`${item.icon} text-54px`} />
                 <div class="flex flex-col flex-start ml-16px">
                   <span>{item.name}</span>
                   <span>{item.count}</span>

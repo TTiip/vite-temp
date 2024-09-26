@@ -1,8 +1,8 @@
-import { describe, expect, it } from 'vitest'
 import flushPromises from 'flush-promises'
+import { describe, expect, it } from 'vitest'
 import { View } from './view'
 
-describe('View', () => {
+describe('view', () => {
   it('should change count', async () => {
     const view = new View()
 

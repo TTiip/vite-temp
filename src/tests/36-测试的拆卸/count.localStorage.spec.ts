@@ -1,5 +1,6 @@
-import { afterEach, beforeEach, describe, expect, test } from 'vitest'
+import { afterEach, describe, expect, test } from 'vitest'
 import { clearCount, getCount, increaseCount } from './count.localStorage'
+
 describe('count', () => {
   afterEach(() => {
     clearCount()

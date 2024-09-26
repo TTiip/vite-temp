@@ -1,5 +1,5 @@
-import { createPinia } from 'pinia'
 import type { App } from 'vue'
+import { createPinia } from 'pinia'
 
 // https:// pinia.web3doc.top/core-concepts/plugins.html#plugins
 export default (app: App) => {

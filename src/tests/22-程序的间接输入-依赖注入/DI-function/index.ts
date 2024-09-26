@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs'
 import type { FileReader } from './readAndProcessFile'
+import { readFileSync } from 'node:fs'
 import { readAndProcessFile } from './readAndProcessFile'
 
 class TextFileReader implements FileReader {

@@ -23,7 +23,7 @@ export default defineConfig({
       primary: {
         DEFAULT: 'var(--el-color-primary)',
         // eslint-disable-next-line no-sequences
-        ...Array(9).fill('').reduce((a, _, index) => (a[index + 1] = `rgba(var(--el-color-primary-rgb) / ${index + 1}0%)`, a), {}),
+        ...Array.from({ length: 9 }).fill('').reduce((a, _, index) => (a[index + 1] = `rgba(var(--el-color-primary-rgb) / ${index + 1}0%)`, a), {}),
       },
     },
   },

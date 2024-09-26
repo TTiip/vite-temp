@@ -14,4 +14,3 @@ export function addTodo (title: string) {
 export function clearTodos () {
   todos.length = 0
 }
-

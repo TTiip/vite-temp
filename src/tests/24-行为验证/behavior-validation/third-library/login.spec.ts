@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from 'vitest'
 import { cxrLogin } from 'cxr'
+import { describe, expect, it, vi } from 'vitest'
 import { getTip, login, loginV2 } from './login'
 
 // mock

@@ -1,7 +1,7 @@
-import { afterAll, afterEach, beforeAll, expect, test } from 'vitest'
 import { createPinia, setActivePinia } from 'pinia'
-import { server } from '../mocks/server'
+import { expect, test } from 'vitest'
 import { mockAddTodo, mockRemoveTodo, mockTodoList } from '../mocks/handlers'
+import { server } from '../mocks/server'
 import { useTodoStore } from './todo'
 
 test.todo('sad path')

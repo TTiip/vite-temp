@@ -6,7 +6,7 @@ export default defineComponent({
     return () => (
       <div>
         <i class="i-iconoir:home flex text-60px color-#ff6700"></i>
-				Index
+        Index
       </div>
     )
   },

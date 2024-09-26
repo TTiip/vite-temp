@@ -1,6 +1,6 @@
-import { beforeAll, expect, test, vi } from 'vitest'
-import { createPinia, setActivePinia } from 'pinia'
 import axios from 'axios'
+import { createPinia, setActivePinia } from 'pinia'
+import { beforeAll, expect, test, vi } from 'vitest'
 import { useTodoStore } from './todo'
 
 beforeAll(() => {

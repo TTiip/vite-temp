@@ -1,7 +1,7 @@
-import { defineComponent, shallowRef, watch } from 'vue'
 import { ElConfigProvider } from 'element-plus'
-import { useRoute } from 'vue-router'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+import { defineComponent, shallowRef, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import Layouts from './layouts'
 
 export default defineComponent({

@@ -1,7 +1,7 @@
-import { describe, expect, test, vi } from 'vitest'
-import { OrderProcessor } from './orderProcessor'
-import { updateStock } from './InventoryService'
+import { expect, test, vi } from 'vitest'
 import { sendEmail } from './EmailService'
+import { updateStock } from './InventoryService'
+import { OrderProcessor } from './orderProcessor'
 
 vi.mock('./EmailService.ts', () => {
   return {

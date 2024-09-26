@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { fetchUserAge, userAge } from './user'
-import { doubleUserAge, fetchDoubleUserAge } from './index'
+import { fetchDoubleUserAge } from './index'
+import { fetchUserAge } from './user'
 
 // stub 存根 即替换掉真实的逻辑实现
 // mock 传入的值 实现测试逻辑的完整
