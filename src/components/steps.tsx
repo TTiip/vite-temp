@@ -1,4 +1,5 @@
 import { ElStep, ElSteps } from 'element-plus'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'steps',

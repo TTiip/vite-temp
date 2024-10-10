@@ -1,4 +1,5 @@
 import { ElButton, ElPagination, ElTable, ElTableColumn } from 'element-plus'
+import { defineComponent } from 'vue'
 import type { typeColumnList } from '~/types/table'
 
 export default defineComponent({
